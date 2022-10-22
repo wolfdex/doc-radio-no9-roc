@@ -1,5 +1,12 @@
 # Linux - OpenSUSE
 
+## Patente & Codecs
+
+Codecs eingeschränkt, nachinstallieren aus externen Quellen notwendig
+
+Mesa - (VA-API) Hardwarebeshchleunigung für H264, H265 und VC1 in Mesa entfernt (2022-10)
+- verarbeitung nur über CPU, ungeeignet auf älterer Hardware
+
 ## Editions
 
 ### OpenSUSE Leap
