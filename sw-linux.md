@@ -36,7 +36,7 @@ https://www.linux-magazin.de/news/cadmus-unterdrueckt-hintergrundgeraeusche-in-v
 
 #### NoiseTorch
 
-Eigenständige Anwendung, welche sich ein virtuelles Mic erzeugt, basiert auf RNNoise.
+Eigenständige Anwendung, welche ein virtuelles Mic erzeugt, basiert auf RNNoise.
 
 Bedienung nicht ganz übersichtlich
 
@@ -53,7 +53,7 @@ als VST-Plugin in Anwendungen bzw. VST-Hosts wie Carla nutzbar
 
 Parameter können an Bedarf angepasst 
 
-agiert selbst nicht als virtuelles Mic und somit nicht als Mic-Quelle nutzbar, benötigt zusätzliches als Quelle nutzbares virtuelles Mic
+agiert selbst nicht als virtuelles Mic und somit nicht als Mic-Quelle nutzbar, benötigt zusätzliche virtuelle Quelle (source/virtual) als nutzbares virtuelles Mic
 
 ##### pipewire
 
