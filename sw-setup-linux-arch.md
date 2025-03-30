@@ -8,19 +8,21 @@ https://archlinux.org/
 
 ### Endeavouros
 
-https://endeavouros.com/
-
-
-### Manjaro
-
-https://manjaro.org/
-
+https://endeavouros.com/https://github.com/osam-cologne/archlinux-proaudio
 
 ### Garuda
 
 für Gamer optimiert
 
 https://garudalinux.org/
+
+## repos
+
+### archlinux-proaudio
+
+https://arch.osamc.de/
+
+https://github.com/osam-cologne/archlinux-proaudio
 
 ## Installation
 
