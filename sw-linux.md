@@ -151,6 +151,24 @@ Konfigurationen lassen sich speichern und laden.
 Kann selbst nicht als Host für Plugins dienen.
 
 
+### Mischpult (Mixer)
+
+#### Jack Mixer (jack_mixer)
+
+als eigenständige Anwendung auszuführen und in Audiokette einzubinden. Nicht als Plugin verfügbar.
+
+Es lassen sich nahezu beliebig viele Ein und Ausgabekanäle konfigurieren und als fertige Konfiguration speichern bzw. laden.
+
+
+#### LSP Mixer x4/x8/x16
+
+gibt es als Stereo und Mono Variante
+
+Mixer als LV2 Plugin mehrere Eingänge auf einen Ausgang bringen
+
+sehr praktisch in Carla
+
+
 ### Software zum Streamen
 
 #### Mixxx - DJ Software
