@@ -60,20 +60,6 @@ agiert selbst nicht als virtuelles Mic und somit nicht als Mic-Quelle nutzbar, b
 HW-Mic -> RNNoise ->  virtuelles Mic
 
 
-#### Whisper-Mic
-
-Nutzt OpenAI Whisper für KI-basierte Sprachverbesserung
-
-Echtzeit-Spracherkennung mit Noise Re#### EasyEffects
-
-Noch experimentell, benötigt mehr Rechenleistung
-
-https://github.com/mallorbc/whisper-mic
-
-
-https://github.com/lawl/NoiseTorch
-
-
 #### EasyEffects
 
 Kommt einem vereinfachten LV2/VST-Host sehr nahe. Kann einiges mehr als nur Noisereduction.
@@ -86,16 +72,6 @@ Somit bereits umfangreiche Eingriffe in die Audiokette möglich ohne komplexere 
 Leider keine eigenen Plugins frei integrierbar. Bietet für Ein und Ausgabe, jeweils nur ein Stereokanal.
 
 Komplexere Audiosetups mit mehreren Quellen bzw. Ausgabegeräten erfordern zusätzliche Konfigurationen mit pipewire.
-
-
-##### pipewire
-
-erzeugt EasyEffectsSource (Mic) und EasyEffectsSink (Lautsprecher)
-
-
-Hängt ausgewählte (LV2) Filter innerhalb in die Audio-Kette ein, welche als solches auch in pipewire ersichtlich sind
-
-Filter lassen sich grob innerhalb EasyEffects einstellen, jedoch nicht in Carla
 
 
 ##### Erweiterungen
