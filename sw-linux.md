@@ -305,8 +305,9 @@ Diese erscheinen üblicherweise weder als Eingans- noch als Ausgangsgerät in An
 pactl load-module module-loopback latency_msec=1 source=<input_source> sink=<output_sink>
 ```
 
-alternativ
+alternativ pw-loopback
 
+**pw-loopback** läuft als Annwendung und wird beendet beim schließen des Terminal. daher mit **nohup** oder **disdown** ausführen
 
 ```bash
 
