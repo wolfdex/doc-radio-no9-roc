@@ -331,6 +331,132 @@ pactl load-module module-null-sink media.class=Audio/Sink sink_name=IN-Loop-Inte
 
 ## Audio - Setup(s) unter Linux
 
+#### installation pipewierwe
+Nutzer der audio - Gruppe hinzufügen
+
+```bash
+$sudo usermod -aG audio USERNAME
+```
+
+Installation Pipewire (falls nicht vorhanden, Pakete nachinstallieren)
+
+```bash
+$sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+```
+
+Enabling Pipewire & Session Manager (vorher Status abfragen, ggf. schon vorh.)
+
+```bash
+$systemctl --user enable --now pipewire.socket
+$systemctl --user enable --now pipewire-pulse.socket
+$systemctl --user enable --now wireplumber.service
+```
+
+Pipewire Check
+
+inxi -A		(zeigt Audio Devices und genutzten Audio-Server an)
+pw-top		(zeigt Auslastung von Pipewire an)
+
+Folgende Einstellungen sollten in der Config vorgenommen werden:
+
+```bash
+sudo vim ~/.config/pipewire/jack.conf
+```
+
+```json 
+
+
+    ...
+    jack.properties = {
+
+   node.latency = 128/48000
+    ...
+    jack.short-name = true
+    ...
+    jack.self-connect-mode = allow
+    …
+```
+
+
+#### Tools
+
+
+##### QPWGraph 
+	qpwqraph ist eine GUI für die Pipes innerhalb von Pipewire
+	(Leider noch ein wenig fehlerhaft beim abspeichern)
+    
+```bash
+	$pacman -S qpwgraph
+```
+
+##### AJ-Snapshot 
+	Command Line Tool um Patchbay auszulesen u. abzuspeichern und via Skript
+	vorzuladen (als Unterstützung zu pqwgraph)
+    
+```bash
+	$pacman -S aj-snapshot
+```
+
+#####  Jack-Mixer
+	
+	Jack Desktop GUI Mixer (lautstärke diverser Kanäle anpassen)
+
+```bash
+$pacman -S jack_mixer
+```
+
+#### Installation Radio Software - Internet DJ Console (IDJC)
+
+
+Internet DJ Console (IDJC)
+
+##### Abhängigkeiten:
+(Tipp - checken ob bereits installiert: yay -Ss <Paketname>)
+
+python (> 3.7)			python --version
+
+pacman -S python
+
+python-mutagen		pacman -S python-mutagen
+
+PyGObject			pacman -S python-gobject
+
+GLib2				pacman -S glib2
+
+audio environment:
+
+libshout-idjc			yay -S libshout-idjc
+
+Jack				(siehe oben pipewire-jack)
+
+libsndfile			pacman -S libsndfile
+
+libsamplerate			pacman -S libsamplerate
+
+mpg123			pacman -S mpg123
+
+
+codecs:
+
+TwoLAME			pacman -S twolame
+
+Lame				pacman -S lame
+
+FFmpeg			pacman -S ffmpeg
+
+vorbis-tools			pacman -S libvorbis lib32-libvorbis
+
+FLAC				pacman -S flac
+
+Speex				pacman -S speex
+
+Opus				pacman -S opus
+
+
+
+#### Kompilieren von libshout-idjc & idjc
+
+
 TODO:
 einbauen 
 https://docs.google.com/document/d/1rWF8Kuv9Gm9wCiRDcV0Teb8U7l3KHjG45gMPYh4_IkQ/edit?tab=t.0#heading=h.hfi6kzoengc2 
