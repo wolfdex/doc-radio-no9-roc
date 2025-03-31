@@ -7,6 +7,21 @@ Allgemein ist es Empfohlen, das Setup soweit es nicht anders erforderlich ist m�
 
 Dieses Dokument soll erst einen allgemeinen Überblick schaffen, Konfigurationssbeispiele folgen zum Schluss.
 
+-> Audio - Tools
+
+ein Überblick zu Audio - Software unter Linux
+
+-> Audio unter Linux - pulseaudio, pipewire, jack? 
+
+Grundlagen zu Audio unter Linux
+
+-> Audio - Setup(s) unter Linux
+
+spezifische Setup(s) und skripte zur Umsetzung
+
+
+---
+
 ## Audio - Tools
 
 Ein Überblick zu Audioanwendungen
@@ -231,9 +246,35 @@ Das fertige Carla Setup lässt sich speichern und jederzeit wieder nutzen.
 
 
 
-## Linux - Setup
+## Audio unter Linux - pulseaudio, pipewire, jack? 
 
-soviel zur Theorie
+### pulseaudio
+pulseaudio wurde durch das bessere pipewire ersetzt
+mit **pipewire-pulse** gibt es eine Brücke, damit bisherige pulseaudio - Anwendungen weiterhin funktionieren
+
+### pipewire
+
+**pactl** entstammt zwar pulseaudio, funktioniert in verbindung mit **pipewire-pulse** weiterhin
+
+**pw-cli** übernimmt alternativ die Aufgaben auf der Kommandozeile
+
+#### Devices
+
+Ob virtuell oder echte Hardware. Üblicherweise unterscheiden Audioanwendungen zwischen Geräten mit eingehenden und ausgehenden Signalen.
+In Einzelfall ob gewollt oder nicht kann es passieren, dass einzelne Anwendungen keine Unterscheidung machen und alles verfügbare als Quelle und Ziel anzeigen. Daher empfiehlt sich immer auf eine sinnvolle Benennung zu achten.
+
+Audioanwendungen wie Rauschunterdrückung oder auch Mixer sind oft nicht direkt auswählbar.
+
+Mit virtuellen Geräten kann man solchen Lösungen in Anwendungen ein auswählbares Gerät für eine Signalkette bestimmen.
+
+Ein weiterer praktischer Nutzen ist Signalketten für alle möglichen Geräte zu definieren. Will man das Signal eines Headset-Mic immer durch einen Limiter und Rauschunterdrückung laufen lassen. So baut man diese sich bereits mittels virtuellen Devices für das Headset auf, ohne dass es ständig angeschlossen sein muss. Erst, wenn man es tatsächlich benötigt und anschließt verbindet man das echte Hardware-Gerät mit dem dazu gehörigen virtuellen Gerät der Audiokette. Das geht in Pipewire oder mittels skript.
+
+
+## Audio - Setup(s) unter Linux
+
+TODO: einbauen
+https://docs.google.com/document/d/1rWF8Kuv9Gm9wCiRDcV0Teb8U7l3KHjG45gMPYh4_IkQ/edit?tab=t.0#heading=h.hfi6kzoengc2
+
 
 
 
