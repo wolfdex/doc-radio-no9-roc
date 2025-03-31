@@ -403,6 +403,8 @@ sudo vim ~/.config/pipewire/jack.conf
 $pacman -S jack_mixer
 ```
 
+
+
 #### Installation Radio Software - Internet DJ Console (IDJC)
 
 
@@ -440,7 +442,7 @@ Internet DJ Console (IDJC)
 * Lame				pacman -S lame
 
 * FFmpeg			pacman -S ffmpeg
-
+Patchbay-Beispiel-Bild
 * vorbis-tools			pacman -S libvorbis lib32-libvorbis
 
 * FLAC				pacman -S flac
@@ -450,13 +452,19 @@ Internet DJ Console (IDJC)
 * Opus				pacman -S opus
 
 
-
 #### Kompilieren von libshout-idjc & idjc
-
 
 TODO:
 einbauen 
 https://docs.google.com/document/d/1rWF8Kuv9Gm9wCiRDcV0Teb8U7l3KHjG45gMPYh4_IkQ/edit?tab=t.0#heading=h.hfi6kzoengc2 
+
+
+#### Patchbay Konfiguration
+
+Patchbay-Beispiel-Bild
+![patchbay-example](patchbay-example.png)
+
+
 
 
 
