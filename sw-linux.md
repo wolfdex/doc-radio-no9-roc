@@ -270,6 +270,61 @@ Mit virtuellen Geräten kann man solchen Lösungen in Anwendungen ein auswählba
 Ein weiterer praktischer Nutzen ist Signalketten für alle möglichen Geräte zu definieren. Will man das Signal eines Headset-Mic immer durch einen Limiter und Rauschunterdrückung laufen lassen. So baut man diese sich bereits mittels virtuellen Devices für das Headset auf, ohne dass es ständig angeschlossen sein muss. Erst, wenn man es tatsächlich benötigt und anschließt verbindet man das echte Hardware-Gerät mit dem dazu gehörigen virtuellen Gerät der Audiokette. Das geht in Pipewire oder mittels skript.
 
 
+#####  Sink
+
+Ein Sink funktioniert als Ausgabeziel wie ein Lautsprecher. Ist als solches auch in Audio-Anwendungen als Ziel auswählbar
+
+```bash
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=OUTSinkStereo channel_map=stereo
+
+```
+
+#### (virtual) Source
+
+Ein Source ist, wie der Name bereits sagt, eine Quelle. Diese funktionieren als Eingangssignal wie ein Mic. Diese sind in Anwendungen auch als Quelle auswählbar.
+
+#### Virtual Source (Mic)
+```bash
+
+pactl load-module module-null-sink media.class=Audio/Source/Virtual sink_name=Source-InternalMic node.description="Source_InternalMic"
+pactl load-module module-null-sink media.class=Audio/Source sink_name=Source-InternalMic node.description="Source_InternalMic"
+
+```
+
+#### loop device
+
+
+pactl load-module module-loopback latency_msec=1
+
+
+Ein Loop-Device kann man als Hilfsdevice zum einfacheren routen ansehen. Einige Anwendungen und Audiotreiber erzeugen solche solche automatisch.
+Diese erscheinen üblicherweise weder als Eingans- noch als Ausgangsgerät in Anwendungen. Üblicherweise verwaltet es die erzeugende Anwendung selbst oder man muss direkt in Pipewire damit damit agieren.
+
+
+```bash
+pactl load-module module-loopback latency_msec=1 source=<input_source> sink=<output_sink>
+```
+
+```bash
+
+nohup pw-loopback --capture-props='node.name=MyCaptureNode' --playback-props='node.name=MyPlaybackNode' &
+```
+
+oder 
+
+```bash
+pw-loopback --capture-props='node.name=MyCaptureNode' --playback-props='node.name=MyPlaybackNode' & disown
+```
+
+
+So praktisch diese sein können, so kann man diese sich mit pactl leider nicht frei benennen. Weshalb ich bei Bedarf ein normales Sink erzeuge und diese zur Unterscheidung etwas anders benenne. Nachteil, es erschein in Auswahlmenüs.
+
+fake loop device
+```bash
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=IN-Loop-InternalMic node.description="IN_LoopSink_InternalMic"
+```
+
+
 ## Audio - Setup(s) unter Linux
 
 TODO:
