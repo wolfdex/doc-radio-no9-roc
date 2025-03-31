@@ -305,6 +305,9 @@ Diese erscheinen üblicherweise weder als Eingans- noch als Ausgangsgerät in An
 pactl load-module module-loopback latency_msec=1 source=<input_source> sink=<output_sink>
 ```
 
+alternativ
+
+
 ```bash
 
 nohup pw-loopback --capture-props='node.name=MyCaptureNode' --playback-props='node.name=MyPlaybackNode' &
