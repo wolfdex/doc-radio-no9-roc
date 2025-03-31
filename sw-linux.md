@@ -272,8 +272,9 @@ Ein weiterer praktischer Nutzen ist Signalketten für alle möglichen Geräte zu
 
 ## Audio - Setup(s) unter Linux
 
-TODO: einbauen
-https://docs.google.com/document/d/1rWF8Kuv9Gm9wCiRDcV0Teb8U7l3KHjG45gMPYh4_IkQ/edit?tab=t.0#heading=h.hfi6kzoengc2
+TODO:
+einbauen 
+https://docs.google.com/document/d/1rWF8Kuv9Gm9wCiRDcV0Teb8U7l3KHjG45gMPYh4_IkQ/edit?tab=t.0#heading=h.hfi6kzoengc2 
 
 
 
