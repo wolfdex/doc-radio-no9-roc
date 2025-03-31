@@ -363,9 +363,7 @@ Folgende Einstellungen sollten in der Config vorgenommen werden:
 sudo vim ~/.config/pipewire/jack.conf
 ```
 
-```json 
-
-
+``` 
     ...
     jack.properties = {
 
@@ -413,44 +411,43 @@ Internet DJ Console (IDJC)
 ##### Abhängigkeiten:
 (Tipp - checken ob bereits installiert: yay -Ss <Paketname>)
 
-python (> 3.7)			python --version
+* python (> 3.7)			python --version
+ pacman -S python
 
-pacman -S python
+* python-mutagen		pacman -S python-mutagen
 
-python-mutagen		pacman -S python-mutagen
+* PyGObject			pacman -S python-gobject
 
-PyGObject			pacman -S python-gobject
+* GLib2				pacman -S glib2
 
-GLib2				pacman -S glib2
+##### audio environment:
 
-audio environment:
+* libshout-idjc			yay -S libshout-idjc
 
-libshout-idjc			yay -S libshout-idjc
+* Jack				(siehe oben pipewire-jack)
 
-Jack				(siehe oben pipewire-jack)
+* libsndfile			pacman -S libsndfile
 
-libsndfile			pacman -S libsndfile
+* libsamplerate			pacman -S libsamplerate
 
-libsamplerate			pacman -S libsamplerate
-
-mpg123			pacman -S mpg123
+* mpg123			pacman -S mpg123
 
 
-codecs:
+##### codecs:
 
-TwoLAME			pacman -S twolame
+* TwoLAME			pacman -S twolame
 
-Lame				pacman -S lame
+* Lame				pacman -S lame
 
-FFmpeg			pacman -S ffmpeg
+* FFmpeg			pacman -S ffmpeg
 
-vorbis-tools			pacman -S libvorbis lib32-libvorbis
+* vorbis-tools			pacman -S libvorbis lib32-libvorbis
 
-FLAC				pacman -S flac
+* FLAC				pacman -S flac
 
-Speex				pacman -S speex
+* Speex				pacman -S speex
 
-Opus				pacman -S opus
+* Opus				pacman -S opus
 
 
 
