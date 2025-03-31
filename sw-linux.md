@@ -330,8 +330,8 @@ pactl load-module module-null-sink media.class=Audio/Sink sink_name=IN-Loop-Inte
 
 
 ## Audio - Setup(s) unter Linux
-
-#### installation pipewierwe
+### Variante 1 - Studio E
+#### installation pipewire
 Nutzer der audio - Gruppe hinzufügen
 
 ```bash
@@ -374,7 +374,6 @@ sudo vim ~/.config/pipewire/jack.conf
     jack.self-connect-mode = allow
     …
 ```
-
 
 #### Tools
 
